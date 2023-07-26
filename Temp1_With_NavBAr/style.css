@@ -1,0 +1,96 @@
+*{                                  /**: This is a universal selector that applies styles to all elements on the page. */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;           /*This sets the minimum height of the body to 100 viewport height units, ensuring that
+                                    the body takes up at least the full height of the viewport.*/
+    background: url(https://w0.peakpx.com/wallpaper/172/300/HD-wallpaper-green-nature-green-forest-dark-forest-forest-deep-forest-thick-forest-woodland-k-wall-in-2022-green-nature-nature-dark-green-aesthetic-dark-green-jungle.jpg) no-repeat;
+    background-size: cover;    /*image to cover the entire background area. */
+}  
+.header{
+    position: fixed;           /* header fixed in its position, so it stays at the top of the viewport even when the user scrolls down the page.*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color:transparent;
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 32px;
+    color: aliceblue;
+    text-decoration: none;  /*This removes any text decoration, such as underlining, from the logo.*/
+    font-weight: 700;
+}
+
+.navbar a{                  /*: This applies styles to anchor tags (<a>) within the navigation bar.*/
+    position: relative;;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+     text-decoration:none ;
+     margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    left:0;
+    width: 0;
+    height: 4px;
+    background-color: rgb(174, 201, 53);
+    top: 100%;
+    transition: .3s ;
+}    
+
+.navbar a:hover::before{  /*This targets the same pseudo-element as above, but only when the user hovers over the navigation links.
+                            width: 100%;: This sets the width of the pseudo-element to 100%, effectively making it fully visible and extending it to
+                             the full width of the anchor tag when the user hovers over the link. This creates the underline effect on hover.*/
+    width:100%;
+}
+.welcome {
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(193, 189, 210);
+    font-size: 2cm;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 1000;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+
+.description{
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(223, 230, 210);
+  font-weight: 100;
+  font-size:large;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  text-align:center;
+
+}
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(236, 225, 225, 0.15); /* Setting the background to half-transparent */
+    padding: 10px;
+    color: #040404;
+    font-weight: 700;
+    font-size: 14px;
+}
