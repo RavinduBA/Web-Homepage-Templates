@@ -1,0 +1,196 @@
+@import url(
+
+);
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family:'Popping',sans-serif;
+   
+}
+
+body{
+    display:flex ;
+    justify-content: center;
+    align-items:center ;
+    min-height: 100vh;
+    background: url(background.png)
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    margin-top: 50px;
+}
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 330px;
+    background-color: rgba(34, 32, 30, 0.815); 
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin: 20px;
+}
+.container .box::before{
+     content: '';
+     position: absolute;
+     inset: -10px 50px;
+     border-top: 4px solid var(--clr);
+     border-bottom: 4px solid var(--clr);
+     z-index: -1;
+     transform: skewY(15deg);
+     transition: 0.5s ease-in-out;
+
+}   
+.container:hover .box::before{
+   transform: skewY(0deg) ;
+   inset: -10px 40px;
+}
+
+.container .box::after{
+    content: '';
+    position: absolute;
+    inset: 60px -10px;
+    border-left: 4px solid var(--clr);
+    border-right: 4px solid var(--clr);
+    z-index: -1;
+    transform: skewY(15deg);
+    transition: 0.5s ease-in-out
+
+}   
+.container:hover .box::after{
+  transform: skewY(0deg) ;
+  inset: 40px -10px;
+}
+
+.container .box .content{
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       text-align: center;
+       padding: 0 20px;
+       width: 100%;
+       height: 100%;
+       gap:20px;
+       overflow: hidden;
+}
+.container .box .content .icon{
+    color: var(--clr);
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 6px var(--clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    background:#2e2e2e ; 
+    transition: 0.5s ease-in-out;   
+}   
+.container .box:hover .content .icon{
+    background-color: var(--clr);
+    color: #2e2e2e;
+    box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 300px var(--clr);
+
+}
+
+.container .box .content .text h3{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.5s ease-in-out;
+}
+.container .box:hover .content .text h3{
+    color: #2e2e2e;
+}
+.container .box .content .text p{
+    color: #999;
+    transition: 0.5s ease-in-out;
+}
+.container .box:hover .content .text p{
+    color: #222;
+}
+.container .box .content .text a{
+   position: relative;
+   background: var(--clr);
+   color: #2e2e2e;
+   padding: 8px 12px;
+   display: inline-block;
+   text-decoration: none;
+   font-weight: 500;
+   margin-top: 10px ;
+   transition: 0.5s ease-in-out;
+}
+.container .box:hover .content .text a{
+      background:#2e2e2e;
+      color: var(--clr);
+
+}
+
+.header{
+    position: fixed;           /* header fixed in its position, so it stays at the top of the viewport even when the user scrolls down the page.*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: rgba(24, 21, 17, 0.5); ;
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 32px;
+    color: aliceblue;
+    text-decoration: none;  /*This removes any text decoration, such as underlining, from the logo.*/
+    font-weight: 700;
+}
+
+.navbar a{                  /*: This applies styles to anchor tags (<a>) within the navigation bar.*/
+    position: relative;;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+     text-decoration:none ;
+     margin-left: 40px;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    left:0;
+    width: 0;
+    height: 4px;
+    background-color: rgb(174, 201, 53);
+    top: 100%;
+    transition: .3s ;
+}    
+
+.navbar a:hover::before{  /*This targets the same pseudo-element as above, but only when the user hovers over the navigation links.
+                            width: 100%;: This sets the width of the pseudo-element to 100%, effectively making it fully visible and extending it to
+                             the full width of the anchor tag when the user hovers over the link. This creates the underline effect on hover.*/
+    width:100%;
+}
+
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(236, 225, 225, 0.15); /* Setting the background to half-transparent */
+    padding: 10px;
+    color: #040404;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
