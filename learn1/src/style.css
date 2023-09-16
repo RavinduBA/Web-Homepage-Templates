@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    font-family:"Poppins", sans-serif;
+}
+body{
+    margin: 0;
+}
+
+
+
+.nav{
+ 
+    height: 70px;
+    display: flex;
+    background-color: rgb(241, 238, 233);
+    padding: 20px 36px;
+    
+}
+.content{
+    padding-top: 50px;
+   display: flex;
+   flex-direction: column;
+ 
+
+}
+.image2{
+     width: 1000px;
+    align-self: center;
+
+}
+.topic1{
+      font-weight: 600;
+      font-size: 70px;
+      padding-left: 70px;
+     
+}
+.para1{
+    font-size: 30px;
+    padding-left: 70px;
+    color: rgb(65, 67, 70);
+    margin-top: -20px;
+}
+.cardset{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   margin: 0px 200px;
+   
+}
+
+.card{
+    width: 220px;
+    font-size: 15px;
+    margin: 20px;
+    background-color: rgb(241, 239, 229);
+    border-radius: 10px;
+    position: relative;
+   
+}
+.cardStats{
+    display: flex;
+    align-items: center;
+  
+}
+
+.imageS{
+    width: 100%;
+}
+.imageSS{
+  height: 14px;
+}
+.gray{
+    color: #989494;
+}
+.bold{
+    font-weight: 900;
+}
+.badge{
+    position:absolute;
+    top: 9px;
+    left: 10px;
+    background-color: white;
+    font-weight: 600;
+    padding: 3px 5px;
+    height: 25px;
+    
+    
+}
